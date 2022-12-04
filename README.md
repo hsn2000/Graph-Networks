@@ -13,6 +13,24 @@ Some of the interfaces of the program are attached below:
 
   - Main Interface
    <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/Interface1.png">
+   
+   - After Selecting the nodes you can use your file to visualize and apply multiple algorithms on your graph
+   <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/Interface2.png">
+   
+   - Visualizing the graph as a Directed Graph
+   <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/DirectedGraph.png">
+   
+   - Visualizing the graph as a Unirected Graph
+   <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/UnirectedGraph.png">
+   
+   - Applying Prims Algorithm. Graph will also tell the minimum distance
+   <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/Prims.png">
+  
+  - Applying Dijkstra Algorithm from node 5
+   <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/Dijskra.png">
+   
+   - Calculating Clustering Co-efficients
+   <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/Clustering.png">
   
 
 
