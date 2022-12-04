@@ -20,8 +20,8 @@ Some of the interfaces of the program are attached below:
    - Visualizing the graph as a Directed Graph
    <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/DirectedGraph.png">
    
-   - Visualizing the graph as a Unirected Graph
-   <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/UnirectedGraph.png">
+   - Visualizing the graph as a Undirected Graph
+   <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/UndirectedGraph.png">
    
    - Applying Prims Algorithm. Graph will also tell the minimum distance
    <img height="400px" src="https://github.com/hsn2000/Graph-Networks/blob/main/Images/Prims.png">
