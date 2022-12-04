@@ -1,0 +1,66 @@
+from tkinter import *
+import tkinter.font as Font
+import PyPDF2
+from PIL import Image, ImageTk
+from tkinter.filedialog import askopenfile
+
+DataList=[]
+DataList2=[]
+list_of_xaxis = []
+list_of_yaxis = []
+
+def ReadFile(node):
+    global input
+    input=node
+
+root = Tk()
+
+View1 = Canvas(root, width=550, height=100,bg="#20bebe").grid(columnspan=5, rowspan=2,row=0)
+Label(root, text="        Welcome the the World Of Graphs!",font=("Raleway",20), bg="#20bebe", fg="white").grid(column=0, row=0,columnspan=4)
+Label(root, text="     Please Select the input File",font=("Raleway",15), bg="#20bebe", fg="white").grid(column=0, row=1,columnspan=4)
+View2 = Canvas(root, width=550, height=50,bg="#20bebe").grid(columnspan=5, rowspan=1,row=2)
+View3 = Canvas(root, width=550, height=250,bg="#20bebe").grid(columnspan=5, rowspan=5,row=3,column=0)
+btn10 = Button(root, text="10 Nodes", font="Raleway", bg="#20bebe", fg="white").grid(column=1, row=3)
+btn20 = Button(root, text="20 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(10)).grid(column=3, row=3)
+btn30 = Button(root, text="30 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(20)).grid(column=1, row=4)
+btn40 = Button(root, text="40 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(30)).grid(column=3, row=4)
+btn50 = Button(root, text="50 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(50)).grid(column=1, row=5)
+btn60 = Button(root, text="60 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(60)).grid(column=3, row=5)
+btn70 = Button(root, text="70 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(70)).grid(column=1, row=6)
+btn80 = Button(root, text="80 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(80)).grid(column=3, row=6)
+btn90 = Button(root, text="90 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(90)).grid(column=1, row=7)
+btn100 = Button(root, text="100 Nodes", font="Raleway", bg="#20bebe", fg="white", command=ReadFile(100)).grid(column=3, row=7)
+
+root.mainloop()
+
+with open("input" + str(input) + ".txt", "r") as f:
+    DataList = f.readlines()
+
+DataList2 = [x.replace('\n', '') for x in DataList]
+DataList2.remove('NETSIM')
+while("" in DataList2) :
+    DataList2.remove("")
+num_of_nodes = int(DataList2[0])                                    #number of nodes lay lia ha
+DataList2.remove(DataList2[0])
+
+DataList2 = [i.split('\t') for i in DataList2]
+print(DataList2)
+
+for i in range(num_of_nodes):
+    del (DataList2[i][0])
+    list_of_xaxis.append(DataList2[i][0])
+    list_of_yaxis.append(DataList2[i][1])
+count = 0
+index = 0
+
+while (count<num_of_nodes):
+    del DataList2[index]
+    count +=1
+
+for x in range(len(DataList2)):                                 #nested list me sy '' remove krdia
+    for y in range(len(DataList2[x])):
+        if (DataList2[x][y] == ''):
+            del DataList2[x][y]
+
+print(DataList)
+print(DataList2)
